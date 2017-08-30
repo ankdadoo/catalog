@@ -28,6 +28,12 @@ public class CatalogController {
 		return new ModelAndView("item", "item", itemRepository.findOne(id));
 	}
 
+	@RequestMapping("/ping")
+	public String ping() {
+		System.out.println("**** in id.html-- 2");
+		return "Pinging -- Catalog MS ";
+	}
+
 	@RequestMapping("/list.html")
 	public ModelAndView ItemList() {
 		System.out.println("**** in id.html -- 8");
